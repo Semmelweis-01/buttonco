@@ -1,0 +1,24 @@
+{
+  "name": "buttonco",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "BUTTONCO — the button that is definitely not to be pressed.",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "shots": "node scripts/shots.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "jsdom": "^29.1.1",
+    "typescript": "^5.6.0",
+    "vite": "^5.4.0",
+    "vitest": "^2.1.0"
+  },
+  "license": "MIT"
+}
