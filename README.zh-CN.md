@@ -10,7 +10,6 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/semmelweis-01/buttonco/actions/workflows/ci.yml"><img alt="CI 状态" src="https://img.shields.io/github/actions/workflow/status/semmelweis-01/buttonco/ci.yml?branch=main&label=CI"></a>
   <a href="./LICENSE"><img alt="许可证：MIT" src="https://img.shields.io/badge/license-MIT-2ea44f"></a>
   <img alt="运行时依赖：0" src="https://img.shields.io/badge/runtime%20dependencies-0-1f6feb">
   <img alt="欢迎 PR" src="https://img.shields.io/badge/PRs-welcome-brightgreen">
@@ -32,7 +31,7 @@
 
 **<https://semmelweis-01.github.io/buttonco/>**
 
-免安装、免注册、没有撤销。每次推送到 `main`，CI 会自动部署到 GitHub Pages。
+免安装、免注册、没有撤销。静态产物从 `gh-pages` 分支发布到 GitHub Pages。
 
 ## 截图
 
@@ -66,7 +65,7 @@ npm run dev      # http://localhost:5173
 npm test         # vitest：引擎 + 内容 + 双语三套测试
 ```
 
-构建静态产物（CI 部署的就是它）：
+构建静态产物（部署的就是它）：
 
 ```bash
 npm run build    # tsc --noEmit && vite build  ->  dist/

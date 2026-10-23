@@ -14,7 +14,7 @@ to respect those three boundaries.
 3. **The content layer contains data only.** No logic, no imports outside
    `src/engine/types.ts`, no side effects.
 4. **Don't edit `SPEC.md`.** It is the conceptual contract this project is built against.
-5. **`npm test` and `npm run typecheck` must pass.** CI runs both on every PR.
+5. **`npm test` and `npm run typecheck` must pass.** Run both before opening a PR; a reviewer will run them again.
 
 ## Tone rules (the part that gets PRs rejected)
 
@@ -97,7 +97,7 @@ npm install
 npm run typecheck   # tsc --noEmit
 npm test            # vitest run
 npm run dev         # manual check in the browser
-npm run build       # what CI deploys
+npm run build       # what gets deployed
 ```
 
 Keep commits focused, describe *why* in the message, and include a screenshot or GIF in the PR

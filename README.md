@@ -10,7 +10,6 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/semmelweis-01/buttonco/actions/workflows/ci.yml"><img alt="CI status" src="https://img.shields.io/github/actions/workflow/status/semmelweis-01/buttonco/ci.yml?branch=main&label=CI"></a>
   <a href="./LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-2ea44f"></a>
   <img alt="Runtime dependencies: 0" src="https://img.shields.io/badge/runtime%20dependencies-0-1f6feb">
   <img alt="PRs welcome" src="https://img.shields.io/badge/PRs-welcome-brightgreen">
@@ -32,7 +31,7 @@ A button whose only job is to advise you against pressing it. You pressed it. Th
 
 **<https://semmelweis-01.github.io/buttonco/>**
 
-No install, no account, no undo. Deployed to GitHub Pages by CI on every push to `main`.
+No install, no account, no undo. The static build is published to GitHub Pages from the `gh-pages` branch.
 
 ## Screenshots
 
@@ -66,7 +65,7 @@ npm run dev      # http://localhost:5173
 npm test         # vitest: engine, content, i18n, balance and ui suites
 ```
 
-Build a static bundle (this is exactly what CI deploys):
+Build a static bundle (this is exactly what gets deployed):
 
 ```bash
 npm run build    # tsc --noEmit && vite build  ->  dist/

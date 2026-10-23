@@ -226,5 +226,5 @@ relaxing one of them, it is not a small change — open an issue first.
 | change visuals or audio | `src/ui/*` | section 3 (the UI owns no rules) |
 | change a rule | `src/engine/*` | section 11 — coordinate first |
 
-After any content change: `npm test && npm run typecheck`. CI runs both, plus a build and the
-GitHub Pages deploy on `main`.
+After any content change: `npm test && npm run typecheck`, then `npm run build`. The deploy
+step copies the built `dist/` to the `gh-pages` branch, which is what GitHub Pages serves.
