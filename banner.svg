@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="1200" height="300" role="img" aria-label="BUTTONCO - the button that is definitely not to be pressed">
+  <title>BUTTONCO</title>
+  <defs>
+    <radialGradient id="bg" cx="22%" cy="45%" r="85%">
+      <stop offset="0%" stop-color="#1a1b24"/>
+      <stop offset="55%" stop-color="#101018"/>
+      <stop offset="100%" stop-color="#07070b"/>
+    </radialGradient>
+    <radialGradient id="cap" cx="34%" cy="28%" r="78%">
+      <stop offset="0%" stop-color="#ff7b6b"/>
+      <stop offset="38%" stop-color="#e8342a"/>
+      <stop offset="78%" stop-color="#b3140f"/>
+      <stop offset="100%" stop-color="#6d0704"/>
+    </radialGradient>
+    <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ff2d1a" stop-opacity="0.55"/>
+      <stop offset="55%" stop-color="#ff2d1a" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#ff2d1a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ring" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3a3d4d"/>
+      <stop offset="100%" stop-color="#15161d"/>
+    </linearGradient>
+    <linearGradient id="word" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#b9bccb"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.045" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <style>
+    @keyframes breathe { 0%,100% { opacity: 0.85; } 50% { opacity: 0.45; } }
+    @keyframes bob { 0%,100% { transform: translateY(0px); } 50% { transform: translateY(-4px); } }
+    @keyframes blink { 0%,88%,100% { opacity: 1; } 92% { opacity: 0.25; } }
+    .halo { animation: breathe 3.6s ease-in-out infinite; transform-origin: 200px 150px; }
+    .cap { animation: bob 4.2s ease-in-out infinite; transform-origin: 200px 150px; }
+    .warn { animation: blink 6s steps(1, end) infinite; }
+    @media (prefers-reduced-motion: reduce) {
+      .halo, .cap, .warn { animation: none; }
+    }
+  </style>
+
+  <rect width="1200" height="300" fill="url(#bg)"/>
+  <rect width="1200" height="300" fill="url(#grid)"/>
+
+  <!-- the button -->
+  <circle class="halo" cx="200" cy="150" r="170" fill="url(#halo)"/>
+  <ellipse cx="200" cy="150" rx="122" ry="122" fill="#0a0a0e"/>
+  <ellipse cx="200" cy="150" rx="112" ry="112" fill="url(#ring)"/>
+  <g class="cap">
+    <ellipse cx="200" cy="154" rx="94" ry="94" fill="#4d0503"/>
+    <ellipse cx="200" cy="148" rx="92" ry="92" fill="url(#cap)"/>
+    <ellipse cx="200" cy="148" rx="92" ry="92" fill="none" stroke="#ff8b7d" stroke-opacity="0.35" stroke-width="1.5"/>
+    <ellipse cx="172" cy="116" rx="34" ry="24" fill="#ffffff" fill-opacity="0.22"/>
+    <ellipse cx="172" cy="116" rx="18" ry="12" fill="#ffffff" fill-opacity="0.3"/>
+  </g>
+  <text x="200" y="156" text-anchor="middle" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="19" font-weight="700" fill="#ffffff" fill-opacity="0.55" letter-spacing="3">DO NOT</text>
+  <text x="200" y="176" text-anchor="middle" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="19" font-weight="700" fill="#ffffff" fill-opacity="0.4" letter-spacing="3">PRESS</text>
+
+  <!-- wordmark -->
+  <text x="380" y="146" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="86" font-weight="800" fill="url(#word)" letter-spacing="6">BUTTONCO</text>
+  <rect x="384" y="164" width="200" height="3" fill="#e8342a" fill-opacity="0.9"/>
+  <text x="384" y="205" font-family="Segoe UI, Helvetica Neue, Arial, sans-serif" font-size="26" font-weight="500" fill="#c8ccdb" letter-spacing="0.5">The button that is definitely not to be pressed.</text>
+  <text class="warn" x="384" y="248" font-family="Consolas, Menlo, Courier New, monospace" font-size="15" fill="#ff5a45" letter-spacing="1.5">CERTIFIED BY 0 SAFETY STANDARDS / 已通过 0 项安全认证</text>
+
+  <!-- corner marks -->
+  <path d="M1120 60h28v3h-28z" fill="#3a3d4d"/>
+  <path d="M1120 60h3v28h-3z" fill="#3a3d4d"/>
+  <path d="M52 240h3v28h-3z" fill="#3a3d4d"/>
+  <path d="M52 265h28v3h-28z" fill="#3a3d4d"/>
+  <rect x="1120" y="228" width="32" height="32" fill="none" stroke="#2a2d3a" stroke-width="1"/>
+  <rect x="1128" y="236" width="16" height="16" fill="#e8342a" fill-opacity="0.25"/>
+</svg>
